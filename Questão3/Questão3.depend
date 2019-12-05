@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1575559849 source:c:\users\aluno\documents\questão3\main.cpp
+	<iostream>
+	<string>
+	<Invoice.h>
+
+1575559849 c:\users\aluno\documents\questão3\include\invoice.h
+	<string>
+
