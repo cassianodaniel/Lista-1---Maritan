@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1575564125 source:c:\users\aluno\desktop\lista1_qeustao4\main.cpp
+1575675733 source:c:\users\edgelson\desktop\p2\derzu\roteiro02\questão4\main.cpp
 	<iostream>
 	"Data.h"
+	<locale.h>
 
-1575563996 source:c:\users\aluno\desktop\lista1_qeustao4\src\data.cpp
+1575673394 c:\users\edgelson\desktop\p2\derzu\roteiro02\questão4\include\data.h
+
+1575675239 source:c:\users\edgelson\desktop\p2\derzu\roteiro02\questão4\src\data.cpp
 	<string>
 	"Data.h"
-
-1575564041 c:\users\aluno\desktop\lista1_qeustao4\include\data.h
 

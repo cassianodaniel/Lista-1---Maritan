@@ -11,12 +11,12 @@ class Data
         int getDia();
         int getAno();
         int getMes();
-        int compara(Data);
-        string getMesExtenso(int);
-        bool isBisexto(int);
         void setDia(int, int, int);
         void setMes(int);
         void setAno(int);
+        string compara(Data);
+        string getMesExtenso(int);
+        bool isBisexto(int);
         virtual ~Data();
 
     protected:

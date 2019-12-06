@@ -7,7 +7,7 @@ Data::Data()
 {
     Dia = 1;
     Mes = 1;
-    Ano = 0;
+    Ano = 1;
 }
 
 Data::Data(int dia, int mes, int ano)
@@ -17,7 +17,7 @@ Data::Data(int dia, int mes, int ano)
         Ano = ano;
     }
     if(ano < 0){
-        Ano = 0;
+        Ano = 1;
     }
     if(mes <= 12 && mes >=1)
     {
@@ -44,7 +44,7 @@ Data::Data(int dia, int mes, int ano)
         {
             if(mes == 2)
             {
-                if(dia >= 1 || dia <= 29){
+                if(dia >= 1 && dia <= 29){
                     Dia = dia;
                 }
             }
@@ -69,12 +69,44 @@ int Data::getMes()
     return Mes;
 }
 
-int Data::compara(Data d)
+string Data::compara(Data d)
 {
+if((d.Ano == this->Ano) && (d.Mes == this->Mes) && (d.Dia == this->Dia)){
+    return "a) 0 = A data corrente é igual ao ano comparado.";
+}
+    if(d.Ano > Ano){
+        return "b) -1 = A data do parâmetro é maior que a data corrente.";
+    }else if(d.Ano < this->Ano){
+        return "b) 1 = O ano recebido por parâmetro é menor que o ano corrente.";
+    }else if(d.Ano == Ano){
+        if((d.Mes > Mes)){
+            return "b) -1 = A data do parâmetro é maior que a data corrente.";
+            }else if(d.Mes == Mes){
+                if (d.Dia > Dia){
+                    return "b) -1 = A data do parâmetro é maior que a data corrente.";
+                }else if(d.Dia < Dia){
+                    return "b) 1 = A data do parâmetro é menor que a data corrente.";
+                    }
+            }
+        }
+    if(d.Mes >= Mes){
+        if(d.Ano > Ano){
+            return "c) -1 = A data do parâmetro é maior que a data corrente.";
+        }else{
+            return "c) 1 = A data do parâmetro é menor que a data corrente";
+        }
+    }
+
+    if(d.Dia >= Dia){
+        if(d.Ano > Ano && d.Mes >= Mes){
+                return "d) -1 A data do parâmetro é maior que a data corrente";
+        }else{
+            return "d) 1 = A data do parâmetro é menor que a data corrente";
+        }
+    }
 }
 
-string Data::getMesExtenso(int mes)
-{
+string Data::getMesExtenso(int mes){
     switch(mes)
     {
     case 1:
