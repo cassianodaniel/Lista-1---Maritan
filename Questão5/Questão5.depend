@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1575671179 source:c:\users\edgelson\desktop\p2\derzu\roteiro02\questão5\main.cpp
+	<iostream>
+	"Horario.h"
+	<string>
+	<locale.h>
+	<chrono>
+	<thread>
+
+1575669735 c:\users\edgelson\desktop\p2\derzu\roteiro02\questão5\include\horario.h
+	<string>
+
+1575670477 source:c:\users\edgelson\desktop\p2\derzu\roteiro02\questão5\src\horario.cpp
+	"Horario.h"
+	<string>
+	<sstream>
+	<iostream>
+
