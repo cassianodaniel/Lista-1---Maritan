@@ -3,14 +3,11 @@
 #include "Horario.h"
 #include <string>
 #include <locale.h>
-#include <chrono>
-#include <thread>
-
-using namespace std;
+#include <windows.h>
 
 int main(){
 setlocale(LC_ALL, "Portuguese");
-    cout << "Relógio DANIEL CASSIANO:" << endl;
+    cout << "RelÃ³gio DANIEL CASSIANO:" << endl;
     Horario relogio = Horario(23,58,59);
     cout << relogio.toString();
     relogio.avancarHorario();
@@ -26,43 +23,49 @@ setlocale(LC_ALL, "Portuguese");
         cout << relogio.toString();
     }
 
-    puts("Teste de set inválido a seguir: O horário configurado nesse momento é:");
+    puts("Teste de set invÃ¡lido a seguir: O horÃ¡rio configurado nesse momento Ã©:");
     relogio.setHorario(11,40,30);
         cout << relogio.toString() << endl;
-    puts("HORÁ INVÁLIDA SETADA = -30:");
+    puts("HORÃ INVÃLIDA SETADA = -30:");
         relogio.setHora(-30);
         cout << relogio.toString() << endl;
-    puts("Teste de set inválido a seguir: O horário configurado nesse momento é:");
+    puts("Teste de set invÃ¡lido a seguir: O horÃ¡rio configurado nesse momento Ã©:");
         relogio.setHorario(11,40,30);
         cout << relogio.toString() << endl;
-    puts("HORÁ INVÁLIDA SETADA = 25:");
+    puts("HORÃ INVÃLIDA SETADA = 25:");
         relogio.setHora(25);
         cout << relogio.toString() << endl;
-    puts("Teste de set inválido a seguir: O horário configurado nesse momento é:");
+    puts("Teste de set invÃ¡lido a seguir: O horÃ¡rio configurado nesse momento Ã©:");
         relogio.setHorario(11,40,30);
         cout << relogio.toString() << endl;
-    puts("MINUTO INVÁLIDO SETADO = -1:");
+    puts("MINUTO INVÃLIDO SETADO = -1:");
         relogio.setMinuto(-1);
         cout << relogio.toString() << endl;
-    puts("Teste de set inválido a seguir: O horário configurado nesse momento é:");
+    puts("Teste de set invÃ¡lido a seguir: O horÃ¡rio configurado nesse momento Ã©:");
         relogio.setHorario(11,40,30);
         cout << relogio.toString();
-    puts("MINUTO INVÁLIDO SETADO = 61:");
+    puts("MINUTO INVÃLIDO SETADO = 61:");
         relogio.setMinuto(61);
         cout << relogio.toString() << endl;
-    puts("Teste de set inválido a seguir: O horário configurado nesse momento é:");
+    puts("Teste de set invÃ¡lido a seguir: O horÃ¡rio configurado nesse momento Ã©:");
         relogio.setHorario(11,40,30);
         cout << relogio.toString() << endl;
-    puts("SEGUNDO INVÁLIDO SETADO = -1:");
+    puts("SEGUNDO INVÃLIDO SETADO = -1:");
         relogio.setSegundo(-1);
         cout << relogio.toString() << endl;
-    puts("Teste de set inválido a seguir: O horário configurado nesse momento é:");
+    puts("Teste de set invÃ¡lido a seguir: O horÃ¡rio configurado nesse momento Ã©:");
         relogio.setHorario(11,40,30);
         cout << relogio.toString() << endl;
-    puts("SEGUNDO INVÁLIDO SETADO = 61:");
+    puts("SEGUNDO INVÃLIDO SETADO = 61:");
         relogio.setSegundo(61);
     cout << relogio.toString() << endl;
     puts("Fim dos testes.");
+
+        for(int i=0; i<60; i++){
+        relogio.avancarHorario();
+        cout << relogio.toString();
+        Sleep(1000);
+    }
 
     return 0;
 }
