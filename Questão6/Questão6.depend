@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1575834571 source:c:\users\edgelson\desktop\questão6\src\data.cpp
+	"Data.h"
+	<string>
+
+1575834559 c:\users\edgelson\desktop\questão6\include\data.h
+	<string>
+
+1575827856 source:c:\users\edgelson\desktop\questão6\src\horario.cpp
+	"Horario.h"
+	<string>
+	<sstream>
+	<iostream>
+
+1575832917 c:\users\edgelson\desktop\questão6\include\horario.h
+	<string>
+	<Data.h>
+
+1575834450 source:c:\users\edgelson\desktop\questão6\main.cpp
+	<iostream>
+	<Voo.h>
+	<Data.h>
+	<Horario.h>
+	<string>
+	<locale.h>
+
+1575834602 c:\users\edgelson\desktop\questão6\include\voo.h
+	<string>
+	"Horario.h"
+	"Data.h"
+
+1575834351 source:c:\users\edgelson\desktop\questão6\src\voo.cpp
+	"Voo.h"
+	<string>
+	<sstream>
+	<iostream>
+
